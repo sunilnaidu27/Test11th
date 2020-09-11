@@ -1,5 +1,6 @@
 package testpackage;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -21,7 +22,13 @@ public class Testclass {
 		driver.get(
 				"https://sarathicov.nic.in:8443/cas/login?service=https%3A%2F%2Fsarathicov.nic.in%3A8443%2Fsarathiservice%2Fsarathilogin.do");
 		driver.manage().window().maximize();
-		driver.close();
+		driver.findElement(By.xpath("//input[@name='username']")).sendKeys("kl12");
+		driver.findElement(By.xpath("//input[@name='password']")).sendKeys("Kl@23");
+		driver.findElement(By.xpath("//input[@name='logmode']")).sendKeys("123456");
+		driver.findElement(By.xpath("//input[@name='submit']")).click();
+		
+		driver.findElement(By.xpath("//input[@id='tfield']")).sendKeys("123");
+		//driver.close();
 
 	}
 }
