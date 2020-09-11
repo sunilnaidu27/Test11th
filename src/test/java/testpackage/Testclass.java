@@ -19,7 +19,7 @@ public class Testclass {
 		WebDriver driver = new ChromeDriver(capability);
 		// driver = new ChromeDriver();
 		driver.get(
-				"https://sarathicov.nic.in:8443/cas/loin?service=https%3A%2F%2Fsarathicov.nic.in%3A8443%2Fsarathiservice%2Fsarathilogin.do");
+				"https://sarathicov.nic.in:8443/cas/login?service=https%3A%2F%2Fsarathicov.nic.in%3A8443%2Fsarathiservice%2Fsarathilogin.do");
 		driver.manage().window().maximize();
 		driver.close();
 
