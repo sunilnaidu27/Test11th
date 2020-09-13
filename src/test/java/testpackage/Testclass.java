@@ -7,7 +7,9 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.CapabilityType;
 import org.testng.annotations.Test;
 
-public class Testclass {
+import testmain.DataLibrary;
+
+public class Testclass extends DataLibrary{
 
 	@Test
 	public void m1() {
@@ -22,8 +24,8 @@ public class Testclass {
 		driver.get(
 				"https://sarathicov.nic.in:8443/cas/login?service=https%3A%2F%2Fsarathicov.nic.in%3A8443%2Fsarathiservice%2Fsarathilogin.do");
 		driver.manage().window().maximize();
-		driver.findElement(By.xpath("//input[@name='username']")).sendKeys("kl12");
-		driver.findElement(By.xpath("//input[@name='password']")).sendKeys("Kl@23");
+		driver.findElement(By.xpath("//input[@name='username']")).sendKeys(getdata("UserName"));
+		driver.findElement(By.xpath("//input[@name='password']")).sendKeys(getdata("Password"));
 		driver.findElement(By.xpath("//input[@name='logmode']")).sendKeys("123456");
 		driver.findElement(By.xpath("//input[@name='submit']")).click();
 		
